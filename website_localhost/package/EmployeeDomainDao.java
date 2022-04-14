@@ -1,4 +1,3 @@
-package com.example.architecture.hexagonal;
 
 public class EmployeeDomainDao<T,TCommand>{ 
    IPersists<T,TCommand> adapter;

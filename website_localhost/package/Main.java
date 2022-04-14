@@ -1,4 +1,3 @@
-package com.example.architecture.hexagonal;
 public class Main {
    public static void main(String[] args) {
      EmployeeDomainDao<EmployeeDomainObject,EmployeeCommand> dao = new EmployeeDomainDao<EmployeeDomainObject,EmployeeCommand>();

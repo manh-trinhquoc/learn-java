@@ -1,4 +1,3 @@
-package com.example.architecture.hexagonal;
 
 public class DataBaseChannelAdapter implements IPersists<EmployeeDomainObject,EmployeeCommand>{
    public void save(EmployeeDomainObject t, EmployeeCommand commandObject) { 

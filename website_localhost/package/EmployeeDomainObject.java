@@ -1,4 +1,3 @@
-package com.example.architecture.hexagonal;
 
 public class EmployeeDomainObject {
    public String name;

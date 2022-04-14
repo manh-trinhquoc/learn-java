@@ -1,4 +1,3 @@
-package com.example.architecture.hexagonal;
 public class EmployeeCommand{
    public String entityClass;
    public String getEntityClass() {
