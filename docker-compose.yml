@@ -33,7 +33,8 @@ services:
     user: root
     volumes:
       - ./website_localhost/:/usr/src/myapp
-    command: bash -c "javac Hello.java && java Hello"
+    # command: bash -c "javac Hello.java && java Hello"
+    command: bash -c "cd package && javac Main.java && java Main"
   bitnami-java:
     image: bitnami/java:latest
     command: "java -jar package.jar"
