@@ -15,8 +15,7 @@ public class EmployeeDomainObject {
       this.address = address;
    }
    @Override
-  public String toString() {
-      return "EmployeeDomainObject [name=" + name + ", address=" + address
-              + "]";
+   public String toString() {
+      return "EmployeeDomainObject [name=" + name + ", address=" + address              + "]";
    }
 }
