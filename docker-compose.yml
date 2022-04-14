@@ -17,16 +17,25 @@ services:
     volumes:
       - ./docker/web/etc/nginx/conf.d:/etc/nginx/conf.d
       - ./website_localhost:/var/www/html
-    depends_on:
-      - wordpress
   
-  # các service để test
-  ubuntu:
+  java:
     build:
       context: .
-      dockerfile: Ubuntu.Dockerfile
+      dockerfile: Java.Dockerfile
     user: root
     volumes:
       - ./website_localhost/:/var/www/html
-    depends_on:
-      - db
+    command: bash -c "javac Hello.java && java Hello"
+  openjdk:
+    build:
+      context: .
+      dockerfile: Openjdk.Dockerfile
+    user: root
+    volumes:
+      - ./website_localhost/:/usr/src/myapp
+    command: bash -c "javac Hello.java && java Hello"
+  bitnami-java:
+    image: bitnami/java:latest
+    command: "java -jar package.jar"
+    volumes:
+      - ./website_localhost/:/app
